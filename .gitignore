@@ -45,6 +45,7 @@ obj/
 *.pdb
 *.make
 Makefile
+.env
 
 # Kernel Module Compile Results
 *.mod*
