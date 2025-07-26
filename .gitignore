@@ -46,6 +46,7 @@ obj/
 *.make
 Makefile
 .env
+.vscode/
 
 # Kernel Module Compile Results
 *.mod*
