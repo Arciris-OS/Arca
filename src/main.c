@@ -1,10 +1,4 @@
 #include "window.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <litehtml.h>
-#include <X11/Xlib.h>
-#include <X11/Xutil.h>
 
 char* load_html_file(const char* path) {
     FILE* fp = fopen(path, "rb");
@@ -20,6 +14,28 @@ char* load_html_file(const char* path) {
     return buf;
 }
 
+char* set_app_title(const char* html, const char* title) {
+    const char* marker = "<div class=\"app-title\">";
+    char* pos = strstr(html, marker);
+    if (!pos) return strdup(html);
+
+    size_t before_len = pos - html + strlen(marker);
+    const char* after = strstr(pos, "</div>");
+    if (!after) return strdup(html);
+
+    after += strlen("</div>");
+    size_t after_offset = after - html;
+
+    size_t new_html_len = before_len + strlen(title) + strlen(html) - (after_offset - before_len) + 1;
+    char* new_html = (char*)malloc(new_html_len);
+    if (!new_html) return NULL;
+
+    memcpy(new_html, html, before_len);
+    strcpy(new_html + before_len, title);
+    strcat(new_html, html + after_offset);
+    return new_html;
+}
+
 void show_window(const char* title, int width, int height) {
     Display* dpy = XOpenDisplay(NULL);
     if (!dpy) {
@@ -30,12 +46,8 @@ void show_window(const char* title, int width, int height) {
     Window win = XCreateSimpleWindow(dpy, RootWindow(dpy, screen), 100, 100, width, height, 1,
                                      BlackPixel(dpy, screen), WhitePixel(dpy, screen));
     XStoreName(dpy, win, title);
-    XSelectInput(dpy, win, ExposureMask | KeyPressMask | StructureNotifyMask);
+    XSelectInput(dpy, win, ExposureMask | KeyPressMask);
     XMapWindow(dpy, win);
-
-    // 閉じるボタン対応
-    Atom WM_DELETE_WINDOW = XInternAtom(dpy, "WM_DELETE_WINDOW", False);
-    XSetWMProtocols(dpy, win, &WM_DELETE_WINDOW, 1);
 
     char* html = load_html_file("desgin/window.html");
     if (!html) {
@@ -45,9 +57,12 @@ void show_window(const char* title, int width, int height) {
         return;
     }
 
-    litehtml::context ctx;
-    std::shared_ptr<litehtml::document> doc = ctx.create_document(html, nullptr, nullptr);
+    char* html_with_title = set_app_title(html, title);
     free(html);
+
+    litehtml::context ctx;
+    std::shared_ptr<litehtml::document> doc = ctx.create_document(html_with_title, nullptr, nullptr);
+    free(html_with_title);
 
     XEvent ev;
     int running = 1;
@@ -61,13 +76,14 @@ void show_window(const char* title, int width, int height) {
             }
         } else if (ev.type == KeyPress) {
             running = 0;
-        } else if (ev.type == ClientMessage) {
-            if ((Atom)ev.xclient.data.l[0] == WM_DELETE_WINDOW) {
-                running = 0;
-            }
         }
     }
 
     XDestroyWindow(dpy, win);
     XCloseDisplay(dpy);
+}
+
+int main() {
+    show_window("Arca Window(w)", 800, 600);
+    return 0;
 }

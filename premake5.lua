@@ -7,8 +7,14 @@ project "Arca"
     language "C"
     targetdir "bin/%{cfg.buildcfg}"
 
-    files { "src/**.c", "src/**.h", "include/**.h" }
-    includedirs { "include" }
+    files {
+        "src/**.c", "src/**.h", "include/**.h",
+        "modules/litehtml/include/**.h", "modules/litehtml/src/**.c", "modules/litehtml/support**.h", "modules/litehtml/support**.c"
+    }
+    includedirs {
+        "include",
+        "modules/litehtml/include"
+    }
 
     filter "system:linux"
         links { "X11" }
