@@ -1,4 +1,4 @@
-# WhiteSur GTK theme
+# Arca GTK theme
 
 ## Summary
 
@@ -6,7 +6,7 @@ To be able to use the latest/adequate version of sass, install sassc.
 
 ## How to tweak the theme
 
-WhiteSur (highly infuenced by Adwaita) is a complex theme, so to keep it maintainable, it's written
+Arca (highly infuenced by Adwaita) is a complex theme, so to keep it maintainable, it's written
 and processed in SASS. The generated CSS is then transformed into a gresource file during gtk build
 and used at runtime in a non-legible or editable form.
 
@@ -35,7 +35,7 @@ edit.
 ### Theme glitches on NVIDIA driver
 See upstream [bug](https://web.archive.org/web/20210609140801/https://forums.developer.nvidia.com/t/issues-with-icons-gtk-theme-and-other-graphical-components-prior-to-installation-of-nvidia-drivers/38618).
 
-# WhiteSur Firefox theme
+# Arca Firefox theme
 A MacOS Big Sur theme for Firefox 70+
 
 ## Known bugs
@@ -77,7 +77,7 @@ any specific license on your code.
 ## Credits
 Developed by **Rafael Mardojai** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Sai Kurogetsu](https://github.com/kurogetsusai/firefox-gnome-theme)** original work.
 
-# WhiteSur GDM and GNOME Shell theme
+# Arca GDM and GNOME Shell theme
 
 ## Known bugs
 

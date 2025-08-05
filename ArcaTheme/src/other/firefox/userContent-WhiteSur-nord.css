@@ -1,7 +1,7 @@
-@import "WhiteSur/colors/light-nord.css";
-@import "WhiteSur/colors/dark-nord.css";
+@import "Arca/colors/light-nord.css";
+@import "Arca/colors/dark-nord.css";
 
-@import "WhiteSur/pages/common.css";
-@import "WhiteSur/pages/newtab.css";
-@import "WhiteSur/pages/reader.css";
-@import "WhiteSur/pages/privatebrowsing.css";
+@import "Arca/pages/common.css";
+@import "Arca/pages/newtab.css";
+@import "Arca/pages/reader.css";
+@import "Arca/pages/privatebrowsing.css";

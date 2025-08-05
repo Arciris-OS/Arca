@@ -1,6 +1,6 @@
 VERSION: (GNOME-SHELL) 48.0
 
-RELEASE TIME: Tue Jul 29 09:44:50 PM CST 2025
+RELEASE TIME: 2025年  8月  5日 火曜日 13:28:36 JST
 
 --->>> GTK | GNOME Shell | Cinnamon | Metacity | XFWM | Plank <<<---
 Color variants   : Dark;Light

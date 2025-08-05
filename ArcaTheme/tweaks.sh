@@ -46,7 +46,7 @@ usage() {
   sec_helpify "7. -nb, -noblur"            ""                                                  "  Don't blur '${THEME_NAME}' GDM theme background image"            ""
 
   helpify "" "" "Tweaks for firefox" "options"
-  sec_title "-f, --firefox" "        [(monterey|flat)|alt|(darker|adaptive)]"       "  Without options default WhiteSur theme will install..."                      "  Options:"
+  sec_title "-f, --firefox" "        [(monterey|flat)|alt|(darker|adaptive)]"       "  Without options default Arca theme will install..."                      "  Options:"
   sec_helpify "1. monterey" "      [3+3|3+4|3+5|4+3|4+4|4+5|5+3|5+4|5+5]"           "  Topbar buttons (not window control buttons) number: 'a+b'"                   "  a: left side buttons number, b: right side buttons number"
   sec_helpify "2. flat" "          Monterey alt version"                            ""                                                                              "  Flat round tabs..."
   sec_helpify "3. alt" "           Alt windows button version"                      ""                                                                              "  Alt windows button style like gtk theme"
@@ -116,7 +116,7 @@ while [[ $# -gt 0 ]]; do
       for variant in "${@}"; do
         case "${variant}" in
           default)
-            firefoxtheme="WhiteSur"
+            firefoxtheme="Arca"
             shift ;;
           monterey)
             firefoxtheme="Monterey"

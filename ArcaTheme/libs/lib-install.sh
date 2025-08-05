@@ -10,7 +10,7 @@
 
 source "${REPO_DIR}/libs/lib-core.sh"
 source "${REPO_DIR}/libs/lib-flatpak.sh"
-WHITESUR_SOURCE+=("lib-install.sh")
+Arca_SOURCE+=("lib-install.sh")
 
 ###############################################################################
 #                              DEPENDENCIES                                   #
@@ -328,24 +328,24 @@ install_beggy() {
 
   case "${background}" in
     blank)
-      cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-blank.png"            "${WHITESUR_TMP_DIR}/beggy.png" ;;
+      cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-blank.png"            "${Arca_TMP_DIR}/beggy.png" ;;
     default)
       if [[ "${no_blur}" == "false" && "${no_darken}" == "true" ]]; then
-        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-blur.png"           "${WHITESUR_TMP_DIR}/beggy.png"
+        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-blur.png"           "${Arca_TMP_DIR}/beggy.png"
       elif [[ "${no_blur}" == "false" && "${no_darken}" == "false" ]]; then
-        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-blur-darken.png"    "${WHITESUR_TMP_DIR}/beggy.png"
+        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-blur-darken.png"    "${Arca_TMP_DIR}/beggy.png"
       elif [[ "${no_blur}" == "true" && "${no_darken}" == "true" ]]; then
-        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-default.png"        "${WHITESUR_TMP_DIR}/beggy.png"
+        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-default.png"        "${Arca_TMP_DIR}/beggy.png"
       else
-        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-darken.png"         "${WHITESUR_TMP_DIR}/beggy.png"
+        cp -r "${THEME_SRC_DIR}/assets/gnome-shell/backgrounds/background-darken.png"         "${Arca_TMP_DIR}/beggy.png"
       fi
       ;;
     *)
       if [[ "${no_blur}" == "false" || "${darken}" == "true" ]]; then
         install_beggy_deps
-        convert "${background}" ${CONVERT_OPT}                                                "${WHITESUR_TMP_DIR}/beggy.png"
+        convert "${background}" ${CONVERT_OPT}                                                "${Arca_TMP_DIR}/beggy.png"
       else
-        cp -r "${background}"                                                                 "${WHITESUR_TMP_DIR}/beggy.png"
+        cp -r "${background}"                                                                 "${Arca_TMP_DIR}/beggy.png"
       fi
       ;;
   esac
@@ -377,7 +377,7 @@ install_shelly() {
   cp -r "${THEME_SRC_DIR}/assets/gnome-shell/theme${theme}${scheme}/"*".svg"                  "${TARGET_DIR}/assets"
   cp -r "${THEME_SRC_DIR}/assets/gnome-shell/activities/activities${icon}.svg"                "${TARGET_DIR}/assets/activities.svg"
   cp -r "${THEME_SRC_DIR}/assets/gnome-shell/activities/activities${icon}.svg"                "${TARGET_DIR}/assets/activities-white.svg"
-  cp -r "${WHITESUR_TMP_DIR}/beggy.png"                                                       "${TARGET_DIR}/assets/background.png"
+  cp -r "${Arca_TMP_DIR}/beggy.png"                                                       "${TARGET_DIR}/assets/background.png"
 
   (
     cd "${TARGET_DIR}"
@@ -405,8 +405,8 @@ install_theemy() {
   fi
 
   local TARGET_DIR="${dest}/${name}${color}${opacity}${alt}${theme}${scheme}"
-  local TMP_DIR_T="${WHITESUR_TMP_DIR}/gtk-3.0${color}${opacity}${alt}${theme}${scheme}"
-  local TMP_DIR_F="${WHITESUR_TMP_DIR}/gtk-4.0${color}${opacity}${alt}${theme}${scheme}"
+  local TMP_DIR_T="${Arca_TMP_DIR}/gtk-3.0${color}${opacity}${alt}${theme}${scheme}"
+  local TMP_DIR_F="${Arca_TMP_DIR}/gtk-4.0${color}${opacity}${alt}${theme}${scheme}"
 
   mkdir -p                                                                                    "${TARGET_DIR}"
 
@@ -420,7 +420,7 @@ install_theemy() {
   desktop_entry+="GtkTheme=${name}${color}${opacity}${alt}${theme}${scheme}\n"
   desktop_entry+="MetacityTheme=${name}${color}${opacity}${alt}${theme}${scheme}\n"
   desktop_entry+="IconTheme=${name}${iconcolor}\n"
-  desktop_entry+="CursorTheme=WhiteSur-cursors\n"
+  desktop_entry+="CursorTheme=Arca-cursors\n"
   desktop_entry+="ButtonLayout=close,minimize,maximize:menu\n"
 
   echo -e "${desktop_entry}" >                                                                "${TARGET_DIR}/index.theme"
@@ -630,12 +630,12 @@ install_gdm_theme() {
 
   # Let's go!
   install_theme_deps
-  rm -rf "${WHITESUR_GS_DIR}"; install_beggy
+  rm -rf "${Arca_GS_DIR}"; install_beggy
   gtk_base && shell_base
 
   if check_theme_file "${COMMON_CSS_FILE}"; then # CSS-based theme
-    install_shelly "${colors[0]}" "${opacities[0]}" "${alts[0]}" "${themes[0]}" "${schemes[0]}" "${icon}" "${WHITESUR_GS_DIR}"
-    sed $SED_OPT "s|assets|${WHITESUR_GS_DIR}/assets|" "${WHITESUR_GS_DIR}/gnome-shell.css"
+    install_shelly "${colors[0]}" "${opacities[0]}" "${alts[0]}" "${themes[0]}" "${schemes[0]}" "${icon}" "${Arca_GS_DIR}"
+    sed $SED_OPT "s|assets|${Arca_GS_DIR}/assets|" "${Arca_GS_DIR}/gnome-shell.css"
 
     if check_theme_file "${UBUNTU_CSS_FILE}"; then
       TARGET="${UBUNTU_CSS_FILE}"
@@ -644,18 +644,18 @@ install_gdm_theme() {
     fi
 
     backup_file "${COMMON_CSS_FILE}"
-    ln -sf "${WHITESUR_GS_DIR}/gnome-shell.css" "${COMMON_CSS_FILE}"
+    ln -sf "${Arca_GS_DIR}/gnome-shell.css" "${COMMON_CSS_FILE}"
 
     if [[ "${TARGET}" != '' ]]; then
       backup_file "${TARGET}"
-      ln -sf "${WHITESUR_GS_DIR}/gnome-shell.css" "${TARGET}"
+      ln -sf "${Arca_GS_DIR}/gnome-shell.css" "${TARGET}"
     fi
 
-    # Fix previously installed WhiteSur
+    # Fix previously installed Arca
     restore_file "${ETC_CSS_FILE}"
   else # GR-based theme
-    install_shelly "${colors[0]}" "${opacities[0]}" "${alts[0]}" "${themes[0]}" "${schemes[0]}" "${icon}" "${WHITESUR_TMP_DIR}/shelly"
-    sed $SED_OPT "s|assets|resource:///org/gnome/shell/theme/assets|" "${WHITESUR_TMP_DIR}/shelly/gnome-shell.css"
+    install_shelly "${colors[0]}" "${opacities[0]}" "${alts[0]}" "${themes[0]}" "${schemes[0]}" "${icon}" "${Arca_TMP_DIR}/shelly"
+    sed $SED_OPT "s|assets|resource:///org/gnome/shell/theme/assets|" "${Arca_TMP_DIR}/shelly/gnome-shell.css"
 
     if check_theme_file "$POP_OS_GR_FILE"; then
       TARGET="${POP_OS_GR_FILE}"
@@ -668,15 +668,15 @@ install_gdm_theme() {
     fi
 
     backup_file "${TARGET}"
-    glib-compile-resources --sourcedir="${WHITESUR_TMP_DIR}/shelly" --target="${TARGET}" "${GS_GR_XML_FILE}"
+    glib-compile-resources --sourcedir="${Arca_TMP_DIR}/shelly" --target="${TARGET}" "${GS_GR_XML_FILE}"
 
-    # Fix previously installed WhiteSur
+    # Fix previously installed Arca
     restore_file "${ETC_GR_FILE}"
   fi
 }
 
 revert_gdm_theme() {
-  rm -rf "${WHITESUR_GS_DIR}"
+  rm -rf "${Arca_GS_DIR}"
   restore_file "${COMMON_CSS_FILE}"; restore_file "${UBUNTU_CSS_FILE}"
   restore_file "${ZORIN_CSS_FILE}"; restore_file "${ETC_CSS_FILE}"
   restore_file "${POP_OS_GR_FILE}"; restore_file "${YARU_GR_FILE}"
@@ -734,7 +734,7 @@ install_firefox_theme() {
 
   if [[ "${firefoxtheme}" == 'Flat' && "${theme_name}" == 'Monterey' ]]; then
     cp -rf "${FIREFOX_SRC_DIR}"/userChrome-Monterey-alt"${theme_type}".css                    "${TARGET_DIR}"/userChrome.css
-    cp -rf "${FIREFOX_SRC_DIR}"/WhiteSur/parts/headerbar-urlbar.css                           "${TARGET_DIR}"/Monterey/parts/headerbar-urlbar-alt.css
+    cp -rf "${FIREFOX_SRC_DIR}"/Arca/parts/headerbar-urlbar.css                           "${TARGET_DIR}"/Monterey/parts/headerbar-urlbar-alt.css
   fi
 
   if [[ "${window}" == "alt" ]]; then
@@ -899,18 +899,18 @@ disconnect_flatpak() {
 }
 
 #connect_snap() {
-#  sudo snap install whitesur-gtk-theme
+#  sudo snap install Arca-gtk-theme
 
 #  for i in $(snap connections | grep gtk-common-themes | awk '{print $2}' | cut -f1 -d: | sort -u); do
-#    sudo snap connect "${i}:gtk-3-themes" "whitesur-gtk-theme:gtk-3-themes"
-#    sudo snap connect "${i}:icon-themes" "whitesur-gtk-theme:icon-themes"
+#    sudo snap connect "${i}:gtk-3-themes" "Arca-gtk-theme:gtk-3-themes"
+#    sudo snap connect "${i}:icon-themes" "Arca-gtk-theme:icon-themes"
 #  done
 #}
 
 #disconnect_snap() {
 #  for i in $(snap connections | grep gtk-common-themes | awk '{print $2}' | cut -f1 -d: | sort -u); do
-#    sudo snap disconnect "${i}:gtk-3-themes" "whitesur-gtk-theme:gtk-3-themes"
-#    sudo snap disconnect "${i}:icon-themes" "whitesur-gtk-theme:icon-themes"
+#    sudo snap disconnect "${i}:gtk-3-themes" "Arca-gtk-theme:gtk-3-themes"
+#    sudo snap disconnect "${i}:icon-themes" "Arca-gtk-theme:icon-themes"
 #  done
 #}
 
