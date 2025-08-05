@@ -2,9 +2,9 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=WhiteSur
+THEME_NAME=Arca
 
-_THEME_VARIANTS=('' '-red' '-pink' '-purple' '-green' '-yellow' '-orange' '-grey' '-nord')
+_THEME_VARIANTS=('')
 
 if [ ! -z "${THEME_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _THEME_VARIANTS <<< "${THEME_VARIANTS:-}"
@@ -30,7 +30,7 @@ for theme in "${_THEME_VARIANTS[@]}"; do
 done
 }
 
-cd .. && ./install.sh -d $THEME_DIR -t all
+cd .. && ./install.sh -d $THEME_DIR -t default -n $THEME_NAME
 
 cd $THEME_DIR && Tar_themes && Clear_theme
 

@@ -14,7 +14,7 @@ fi
 
 SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-THEME_NAME=WhiteSur
+THEME_NAME=Arca
 COLOR_VARIANTS=('' '-light' '-dark')
 THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey' '-nord')
 
@@ -52,7 +52,7 @@ install() {
   echo "Installing '${THEME_DIR}'..."
 
   mkdir -p                                                                                   "${THEME_DIR}"
-  cp -r "${SRC_DIR}"/{COPYING,AUTHORS}                                                       "${THEME_DIR}"
+  cp -r "${SRC_DIR}"/COPYING                                                   "${THEME_DIR}"
   cp -r "${SRC_DIR}"/src/index.theme                                                         "${THEME_DIR}"
 
   #cd "${THEME_DIR}"
@@ -281,7 +281,7 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           all)
             themes+=("${THEME_VARIANTS[@]}")
-            shift
+            break
             ;;
           -*|--*)
             break
