@@ -1,2 +1,0 @@
-# Arca
-window manager
