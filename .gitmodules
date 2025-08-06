@@ -1,0 +1,18 @@
+[submodule "arca-shell"]
+	path = arca-shell
+	url = https://gitlab.gnome.org/GNOME/gnome-shell.git
+[submodule "arca-session"]
+	path = arca-session
+	url = https://gitlab.gnome.org/GNOME/gnome-session.git
+[submodule "arca-settings-daemon"]
+	path = arca-settings-daemon
+	url = https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git
+[submodule "arca-control-center"]
+	path = arca-control-center
+	url = https://gitlab.gnome.org/GNOME/gnome-control-center.git
+[submodule "mutter"]
+	path = mutter
+	url = https://gitlab.gnome.org/GNOME/mutter.git
+[submodule "arca-backgrounds"]
+	path = arca-backgrounds
+	url = https://gitlab.gnome.org/GNOME/gnome-backgrounds.git
