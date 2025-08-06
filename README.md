@@ -1,5 +1,6 @@
 # Arca
-This is a Gnome theme.
-This theme is a ArcirisOS's default theme.
+This is a ArcirisOS's default DesktopManeger.
+It is a customized fork of the GNOME Desktop Environment.
 
-I would like to thank [Vince](https://github.com/vinceliuice) , the original author of this theme.
+Arca's visual design is based on the beautiful [WhiteSur](https://github.com/vinceliuice/WhiteSur-gtk-theme). 
+Special thanks to the original author.
