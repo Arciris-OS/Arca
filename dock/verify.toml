@@ -1,0 +1,125 @@
+[[verify]]
+file = "COPYING"
+sha256 = "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+blake3 = "5886b01395916aaa9c9857f7365778ddc4fde3108a794211b61ae3b5afb22bcc"
+md5    = "b234ee4d69f5fce4486a80fdaf4a4263"
+[[verify]]
+file = "README.md"
+sha256 = "d3e926da47091eb6b7917f0669f6c9ccefa98cab0f52d2d9ba2811ffb476782c"
+blake3 = "b335278c70eef1c1e72b6c0534de9914a67ec494bce4966d284efe574be00ee1"
+md5    = "21450560052228b1792442d9dd8ad9fd"
+[[verify]]
+file = "Settings.ui"
+sha256 = "1fac9fba74d85f7f6a97d2823ba478902227d5d8d1d05961f690a5f5a2f94ada"
+blake3 = "93f287beb55cbb5a37ae740c8490f22bd67b7a6b89f8cba7d7a457e999345e26"
+md5    = "f6908070b6ce8fe25f22b17d00f62900"
+[[verify]]
+file = "appIconIndicators.js"
+sha256 = "6d085bf536ba594059af2aae26cf3495840b84535e801cbc6b57b72562e58c18"
+blake3 = "b1b532d935cdb5157d75a34a43d2e938f47b7d7ea73f5e52f850d786a021bbf0"
+md5    = "c25c4ebb1ca3ba49ce0f5bd67efc9b88"
+[[verify]]
+file = "appIcons.js"
+sha256 = "c94e082de96235a714d3ede2d2b19d98a50edfc4642982f1caeda3e7881a057f"
+blake3 = "dfc514e99700a6006281e9ec49868f1691d81f1f8138890ff7edf08c3d347c7f"
+md5    = "468570f98d0cabb62a415a14ca584d0c"
+[[verify]]
+file = "appIconsDecorator.js"
+sha256 = "1beb10a94eee9ca65ba00f946ebc72197dab1936401f4ae1426f06430c2fdde9"
+blake3 = "8650ec0f415d52df9b0c8854a22a9c4ef492d576171f17960044f2e2f3ad4d6c"
+md5    = "0bf3ba4e62011e07cb4189620ddf6ecb"
+[[verify]]
+file = "appSpread.js"
+sha256 = "d2dcb18fdefd3d0a69d678f4d211542fe6d97ee51f6c8a6caca7e5e469738fe5"
+blake3 = "f604a0438a32a3a1401b7b0196a9e816a0c631d131af4db5d047f08191964fc7"
+md5    = "c0c532057e4c4a107b2fbe9e53ea245a"
+[[verify]]
+file = "dash.js"
+sha256 = "96d35816e7b35dca6bb8b53220f7950041789de127fb7bf8ff6dc9b9bd2862f6"
+blake3 = "a901a15886cf4d42a5556f01a198d409a51cd003605d19cdf82f8851edea77d6"
+md5    = "d3a5c93b833ce74c35eaccdcb758e1a3"
+[[verify]]
+file = "dbusmenuUtils.js"
+sha256 = "62c188007488c7fe4dfdb78e6d5eaf192914b5e1dd784eb9cbf17ba35c9d0400"
+blake3 = "2d9760d79acc92d16be9a0741e4cf364f45402dcf94ef99cbd673135bad4c690"
+md5    = "b93f07fc186a8d9c08fbcdd07c051457"
+[[verify]]
+file = "desktopIconsIntegration.js"
+sha256 = "1bb809f79cda2d5a93b986f9b04fc78dd03f2a4316487350f99d7c5a9921e646"
+blake3 = "998ef5fd8a7fa7ac32dc7e2e33d4cc2b49625ad81ed42ccaa6f4b56f15511549"
+md5    = "4b5cf711e9971937e1b8754e6caa10e5"
+[[verify]]
+file = "docking.js"
+sha256 = "1cab9f7c38fa2744eba824f1a8d9be1ed05fdf6c64bbea4726035dd7597efe84"
+blake3 = "8357986e8020ad9554987dca683949a367ba7c1cadc386bee15d173170e05180"
+md5    = "fdb17f1a45e61585d6d259e84b2838f0"
+[[verify]]
+file = "extension.js"
+sha256 = "fad0d8b3e8af33a404debee93c632150dfa161a6c8625831e2dcdfdb0f112148"
+blake3 = "898dfc6d802c897ac43b538c3d10b0dc56142020f4c4848aa5d6342bb29a66ff"
+md5    = "ecf2c9b07348b399e61692dd11157582"
+[[verify]]
+file = "fileManager1API.js"
+sha256 = "e8c3e57dd6c8a9625f15f08f011c9a6adc44677864427dada5f5d6bcc6fbacdc"
+blake3 = "76033f3d0620a3e72ee5c50d904442f1ee53e82f0d16f466c39e4e5d2ffac5e7"
+md5    = "704add3ff09009fc51a4f893c2e0358d"
+[[verify]]
+file = "imports.js"
+sha256 = "45e7f3727273c38644882800c1a10488fc948224543d8c7f6240965b79676264"
+blake3 = "c404bdee1f0893c51544b437e68601fc29261101dd98b7bc5b01a93b3fc31cb8"
+md5    = "101e562e12743d788d980af993c02387"
+[[verify]]
+file = "intellihide.js"
+sha256 = "9387fa1c02f866941d19bf4bd0ae72965eeaf2694fb8c5c1f407204e2af59c57"
+blake3 = "f09d3948a069e3ab0f58b4851fffeb9b691b01daa333a025ac046d639134c2b0"
+md5    = "1bc324a2bc9ad34eeb33a2e94c246eb7"
+[[verify]]
+file = "launcherAPI.js"
+sha256 = "ecc0bb9e4f91e7f8f9c4b4e586e8a913c3dd35816ef20524c7b4228e76dfeff7"
+blake3 = "009508f59b9a68cb3d243b3a77a05b330ddaef209aede578b71734ab74762745"
+md5    = "141fcddfdd9a41a37cdb786b55488067"
+[[verify]]
+file = "locations.js"
+sha256 = "feb35acea2a8d03c23a01ee390f322ecc22493cbe43a53ed56eaa6dca96c0d05"
+blake3 = "62b7d0be4991db3611dc6806589d67ce51f99e691dc0e7ed43239594f352c445"
+md5    = "40f8b6803aed48b4b41bc3d30e334ac1"
+[[verify]]
+file = "locationsWorker.js"
+sha256 = "1fb89d444d50c83824028b76ea0c289dc4f92981eb8e080a7e7c21c5d9d4ff73"
+blake3 = "72e5a1cae1ce93829a45bd18baf8356f130eaedbf14baeeeec374d759562bf76"
+md5    = "b515abee5eb85c9e0b0186f29b526b22"
+[[verify]]
+file = "metadata.json"
+sha256 = "0f3f1fc2a82d16a553d15b8a55bb97b0f29829af1a5b3b927f1d9f61c836475e"
+blake3 = "cd0f32d6610677edb900c3e7c5393ce941c6f14c03b5ccdacb92e08c0064823b"
+md5    = "bea28bfb3548b7bd804cf359d766b342"
+[[verify]]
+file = "notificationsMonitor.js"
+sha256 = "665e0fb4cb49a2b6bed30a0e83fc23294d2818a35b25e809b5a5c9039a04d9d8"
+blake3 = "f7ff02215fc65c412d5cd0b4889d915e24fe1eb0b878f1c38f92633d7cd34cde"
+md5    = "451bd9103105aa5dbea459cc1581a931"
+[[verify]]
+file = "prefs.js"
+sha256 = "c494dc7e21a88fc6dc284570a51f094e4fffdb25f28d51337a4be89162d6fcd9"
+blake3 = "d19bca9b81e4e0eb902d280407e35379874a427090e97d3819c03d010ba9f4f1"
+md5    = "5ab141b65ba378a6cea91c42bfbd9b48"
+[[verify]]
+file = "stylesheet.css"
+sha256 = "394e3359fb80890a4e45d896fd65c7b269885c1ad170e6e9d0f3dfab23902f89"
+blake3 = "e8e21ed28515580d3fb90409b08ab40ffc5c844db5a73cb118a42854d23fc55f"
+md5    = "55f45c7ec290411822be22b48acb3d52"
+[[verify]]
+file = "theming.js"
+sha256 = "5eed842b33215a69a734a64cb565d42c55b038ded13200b38932510acf829975"
+blake3 = "1f69d35650fdc1e0b6d3dce493d46052e79ed8f00e7ceadb60893840fd3734df"
+md5    = "5238a3c42ad6998d935f93bebd3089e3"
+[[verify]]
+file = "utils.js"
+sha256 = "7c60b4c014031b8a6faf7691fc2ea0ede23560135f207a4994ac5cb86f21ffaf"
+blake3 = "7b2143d99beed2b3c3498042526482b0900b4fca1ba3dff3aa3589adf3e58b3a"
+md5    = "24121b58715be5364c8019ae8d7cb560"
+[[verify]]
+file = "windowPreview.js"
+sha256 = "3d6686e3dc251c4d9f87ee8aa80b6534c4e3d60ae5064fc47b867ada63cc2fe0"
+blake3 = "20e7c732f980972143ef82856a4fa017524709a41d17f642b9be2885fd13eebc"
+md5    = "2b13a8d15daf44d21d94940029ce14ee"

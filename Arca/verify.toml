@@ -1,0 +1,10 @@
+[[verify]]
+file = "README.md"
+sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+blake3 = "af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262"
+md5    = "d41d8cd98f00b204e9800998ecf8427e"
+[[verify]]
+file = "index.theme"
+sha256 = "49774d5297bbe70bf71166274a73d6dd581da448f2f0ed96a889ade026d349f1"
+blake3 = "03099eeb87fa2c751c83f6fe700ca5da2c1ca39580d872e95f2676203ffa1739"
+md5    = "5994183c5c51194fdcafee6cd029fe8f"

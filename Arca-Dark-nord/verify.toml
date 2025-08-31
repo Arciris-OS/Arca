@@ -1,0 +1,5 @@
+[[verify]]
+file = "index.theme"
+sha256 = "f03d13c293f5baacb7cb0cf6fc8ff2fc657a4a6bca1a3b527ad89271d04cc5c3"
+blake3 = "3365a9f82caaf244e103a3056e87fb6cd8ac63d9328d9acf67aa9db8e08c46ef"
+md5    = "6fe61ba9c89a461d18a28c85938fab03"
