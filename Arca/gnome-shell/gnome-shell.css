@@ -1,0 +1,258 @@
+/* Arca GNOME Shell theme placeholder */
+
+/* ベースカラー */
+stage {
+  background: linear-gradient(120deg, #f1f1f1 0%, #e5e5e5 100%);
+  font-family: 'SF Pro Display', 'Inter', 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #e6eaf0;
+}
+
+/* パネル（上部バー） */
+#panel {
+  background: rgba(255,255,255,0.65);
+  border-radius: 22px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18), 0 1.5px 0 rgba(0,0,0,0.04);
+  border: 1px solid rgba(200,200,200,0.25);
+  min-height: 36px;
+  margin: 10px 32px 0 32px;
+  font-size: 13px;
+  color: #222;
+  backdrop-filter: blur(24px);
+  padding: 0 12px;
+}
+
+/* パネル内ボタン */
+#panel .panel-button {
+  background: transparent;
+  border-radius: 16px;
+  transition: background 0.2s;
+  padding: 0 16px;
+  color: #222;
+  font-weight: 500;
+  height: 32px;
+  line-height: 32px;
+}
+#panel .panel-button:hover,
+#panel .panel-button:active {
+  background: rgba(0,120,255,0.10);
+  color: #007aff;
+}
+
+/* 時計やアプリ名 */
+#panel .clock,
+#panel .app-menu {
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ポップアップメニュー */
+.popup-menu-content {
+  background: rgba(255,255,255,0.97);
+  border-radius: 14px;
+  border: 1px solid rgba(200,200,200,0.18);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16);
+  padding: 10px 0;
+  color: #222;
+  backdrop-filter: blur(24px);
+}
+
+/* メニューアイテム */
+.popup-menu-item {
+  border-radius: 8px;
+  padding: 8px 28px;
+  transition: background 0.2s, color 0.2s;
+  color: #222;
+}
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+  background: rgba(0,120,255,0.12);
+  color: #007aff;
+}
+
+/* サーチエントリ */
+#searchEntry {
+  background: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  border: 1px solid rgba(200,200,200,0.18);
+  color: #222;
+  padding: 8px 18px;
+  font-size: 15px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+}
+
+/* 通知 */
+#notification {
+  background: rgba(255,255,255,0.97);
+  border-radius: 16px;
+  border: 1px solid rgba(200,200,200,0.18);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16);
+  color: #222;
+  backdrop-filter: blur(24px);
+}
+
+/* Dock */
+#dash, #dock {
+  background: rgba(255,255,255,0.55);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22), 0 1.5px 0 rgba(0,0,0,0.04);
+  border: 1px solid rgba(200,200,200,0.18);
+  padding: 14px 28px;
+  margin-bottom: 36px;
+  min-height: 90px;
+  backdrop-filter: blur(24px);
+}
+
+/* Dockアイコン */
+.dash-item-container, .dock-item-container {
+  background: rgba(255,255,255,0.92);
+  border-radius: 14px;
+  border: 1px solid rgba(220,220,220,0.45);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  margin: 0 10px;
+  padding: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.dash-item-container:hover, .dock-item-container:hover {
+  box-shadow: 0 6px 18px 0 rgba(0,120,255,0.12);
+  border-color: #007aff;
+}
+
+/* アプリアイコン */
+.icon-grid .overview-icon, .app-well-app {
+  background: rgba(255,255,255,0.92);
+  border-radius: 14px;
+  border: 1px solid rgba(220,220,220,0.45);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  padding: 10px;
+  margin: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.icon-grid .overview-icon:hover, .app-well-app:hover {
+  box-shadow: 0 6px 18px 0 rgba(0,120,255,0.12);
+  border-color: #007aff;
+}
+
+/* Dockのアイコンサイズ調整 */
+.dash-item-container .app-icon, .dock-item-container .app-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* アクセントカラー */
+:root {
+  --arca-accent: #007aff;
+}
+
+/* --- Window (Figma node-id=5-158) --- */
+/* --- FigmaContextMCP: Window(main) node-id=5-799 --- */
+.window-frame, .window, .modal-dialog, .csd {
+  background: #d9d9d9; /* fill_CLTOWM */
+  border-radius: 20px;  /* borderRadius: 20px */
+  border: 1.5px solid rgba(200,200,200,0.22);
+  box-shadow:
+    0 8px 32px 0 rgba(0,0,0,0.18),
+    0 1.5px 0 rgba(0,0,0,0.04);
+  color: #222;
+  backdrop-filter: blur(24px);
+  overflow: hidden;
+}
+
+/* --- FigmaContextMCP: Window tab/bar node-id=5-803 --- */
+.window-frame .titlebar, .csd .titlebar, .modal-dialog .titlebar {
+  background: #fff; /* fill_RDY909 */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid rgba(200,200,200,0.18);
+  min-height: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* タイトル中央寄せ */
+  position: relative;
+  padding: 0;
+  font-size: 24px; /* style_XV8DJ6 */
+  font-family: 'Inter', 'SF Pro Display', 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  color: #000; /* fill_MM37O5 */
+  letter-spacing: 0.01em;
+  box-shadow: none;
+}
+
+/* --- FigmaContextMCP: Window Buttons node-id=5-809 --- */
+.window-frame .titlebar .window-buttons,
+.csd .titlebar .window-buttons,
+.modal-dialog .titlebar .window-buttons {
+  position: absolute;
+  left: 23px; /* layout_KF1MH6.x */
+  top: 13px;  /* layout_KF1MH6.y */
+  display: flex;
+  gap: 13px;
+  height: 19px;
+}
+
+/* 各ウィンドウボタン */
+.window-frame .titlebar .window-button,
+.csd .titlebar .window-button,
+.modal-dialog .titlebar .window-button {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0;
+  background: #e0e0e0;
+  transition: filter 0.2s;
+}
+.window-frame .titlebar .window-button.close,
+.csd .titlebar .window-button.close {
+  background: #ff0000; /* fill_GNQCU7 */
+}
+.window-frame .titlebar .window-button.minimize,
+.csd .titlebar .window-button.minimize {
+  background: #ffc300; /* fill_XK5ACE */
+}
+.window-frame .titlebar .window-button.maximize,
+.csd .titlebar .window-button.maximize {
+  background: #00c610; /* fill_VWEGC8 */
+}
+.window-frame .titlebar .window-button:hover,
+.csd .titlebar .window-button:hover {
+  filter: brightness(0.92);
+}
+
+/* --- FigmaContextMCP: Window Title (AppTitle) node-id=5-810 --- */
+.window-frame .titlebar .window-title,
+.csd .titlebar .window-title,
+.modal-dialog .titlebar .window-title {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Inter', 'SF Pro Display', 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  color: #000;
+  line-height: 45px;
+  letter-spacing: 0.01em;
+  /* Figma: style_XV8DJ6, fill_MM37O5 */
+}
+
+/* --- FigmaContextMCP: Window content --- */
+.window-frame .window-content,
+.csd .window-content,
+.modal-dialog .window-content {
+  background: transparent;
+  border-radius: 0 0 20px 20px;
+  padding: 24px 28px;
+  color: #222;
+  font-size: 15px;
+}
+
+/* フォーカス時の枠強調 */
+.window-frame:focus, .window:focus, .modal-dialog:focus, .csd:focus {
+  border-color: #007aff;
+  box-shadow:
+    0 8px 32px 0 rgba(0,122,255,0.10),
+    0 1.5px 0 rgba(0,0,0,0.04);
+}

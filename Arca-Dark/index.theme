@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Arca-Dark
+Comment=A MacOS BigSur like Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Arca-Dark
+MetacityTheme=Arca-Dark
+IconTheme=Arca-Dark
+CursorTheme=Arca-cursors
+ButtonLayout=close,minimize,maximize:menu
+

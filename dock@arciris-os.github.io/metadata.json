@@ -1,0 +1,16 @@
+{
+    "shell-version": [
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+    ],
+    "uuid": "dock@arciris-os.github.io",
+    "name": "Arca Dock",
+    "description": "Ubuntu Dock fork for arca",
+    "original-author": "",
+    "url": "https://github.com/arciris-os/dock",
+    "gettext-domain": "dashtodock",
+    "version": 101
+}
