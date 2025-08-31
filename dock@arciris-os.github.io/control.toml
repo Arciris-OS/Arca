@@ -1,0 +1,7 @@
+package = "arca-dock"
+version = "1.0"
+arch = "amd64"
+maintainer = "Arciris developers <info@dev.arciris.org>"
+dependencies = ["libc6 (>= 2.15)", "vim-rt (>= 9.1)"]
+description = "ArcirisOS Dock"
+license = "GNU General Public License"
