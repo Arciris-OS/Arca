@@ -1,0 +1,5 @@
+[[verify]]
+file = "wallpaper_default.jpg"
+sha256 = "6633a93d0dc19956142c7bf13c4e32a3df272e7e350532db71a0a23975667a31"
+blake3 = "bd350d348b5d2f8c4cd4fdcfd7e1ba0672f6a91c5234f69bda7b7547f360c8d0"
+md5    = "6850355be308fa4eb8610ee7aad2ddfe"
