@@ -1,7 +1,7 @@
 package = "arca-bg"
 version = "1.0"
 arch = "amd64"
-maintainer = "Arciris developers <info@dev.arciris.org>"
+maintainer = "Arciris developers <info@mail.arciris.org>"
 dependencies = ["libc6 (>= 2.15)", "vim-rt (>= 9.1)"]
 description = "ArcirisOS Backgrounds"
 license = "MIT"

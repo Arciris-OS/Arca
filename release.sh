@@ -2,7 +2,7 @@
 
 set -e
 
-targets=("Arca" "Arca-Dark-nord" "Arca-Light-nord" "dock" "bg")
+targets=("Arca" "Arca-Dark-nord" "Arca-Light-nord" "dock" "bg" "ArcaIcon")
 outdir="tmp"
 mkdir -p "$outdir"
 
